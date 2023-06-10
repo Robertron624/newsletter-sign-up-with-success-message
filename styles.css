@@ -20,9 +20,11 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul,
+ol {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* Set core root defaults */
@@ -87,4 +89,79 @@ body {
     --charcoal-grey: hsl(235, 18%, 26%);
     --grey: hsl(231, 7%, 60%);
     --white: hsl(0, 0%, 100%);
+}
+
+
+section.newsletter {
+    margin-inline: auto;
+}
+
+.newsletter .content{
+    padding: 2.5rem 1.5rem;
+}
+
+.newsletter .content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.newsletter .content > p {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.newsletter .content .advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.newsletter .content .advantages li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.form-container form .input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-container form .input-container label{
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.form-container form .input-container input {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--grey);
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.form-container form .input-container input::placeholder {
+    color: var(--grey);
+}
+
+.form-container form button {
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    width: 100%;
+    cursor: pointer;
 }
