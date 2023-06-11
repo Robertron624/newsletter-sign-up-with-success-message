@@ -8,6 +8,10 @@ const emailErrorMessage = document.querySelector(
     ".input-container .error-message"
 );
 
+const emailErrorMessageDesktop = document.querySelector(
+    ".input-container .error-message-desktop"
+);
+
 const newsLetterContainer = document.querySelector("section.newsletter");
 
 let isEmailValid;
@@ -26,11 +30,13 @@ function handleSubmit(e) {
     if (!isEmailValid) {
         email.classList.add("error");
         emailErrorMessage.style.visibility = "visible";
+        emailErrorMessageDesktop.style.visibility = "visible";
         return;
     }
 
     email.classList.remove("error");
     emailErrorMessage.style.visibility = "hidden";
+    emailErrorMessageDesktop.style.visibility = "hidden";
 
     const thankYouElement = `
     <div class="thank-you">

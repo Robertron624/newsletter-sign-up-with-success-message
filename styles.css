@@ -144,6 +144,10 @@ section.newsletter {
     margin-bottom: 0.5rem;
 }
 
+.form-container form .input-container label .error-message-desktop {
+    display: none;
+}
+
 .form-container form .input-container input {
     padding: 1rem;
     border-radius: 0.5rem;
@@ -170,6 +174,13 @@ section.newsletter {
     line-height: 1.5;
     width: 100%;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.thank-you button:hover,
+.form-container form button:hover {
+    background-color: var(--tomato);
+    box-shadow: 0px 10px 20px rgba(255, 99, 71, 0.3);
 }
 
 input.error {
@@ -217,4 +228,43 @@ span.error-message {
 /* ### Desktop */
 
 @media screen and (min-width: 768px) {
+
+    main {
+        background-color: var(--charcoal-grey);
+        display: flex;
+        align-items: center;
+    }
+
+    section.newsletter {
+        display: flex;
+        gap: 2rem;
+        background-color: white;
+        max-width: 1000px;
+        border-radius: 20px;
+        padding: 1rem 2.5rem;
+    }
+
+    section.newsletter .hero-container {
+        order: 1;
+    }
+
+    .newsletter .content {
+        padding: 2.5rem 0;
+    }
+
+    .input-container span.error-message {
+        display: none;
+    }
+
+    .form-container form .input-container label {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-container form .input-container label .error-message-desktop {
+        display: inline-block;
+        visibility: hidden;
+        color: var(--tomato);
+    }
+
 }
