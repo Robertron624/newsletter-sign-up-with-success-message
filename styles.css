@@ -82,6 +82,7 @@ body {
     /* ### Primary */
 
     --tomato: hsl(4, 100%, 67%);
+    --tomato-light: hsl(5, 100%, 95%);
 
     /* ### Neutral */
 
@@ -130,13 +131,14 @@ section.newsletter {
 .form-container form .input-container{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .form-container form .input-container label{
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.5;
+    margin-bottom: .5rem;
 }
 
 .form-container form .input-container input {
@@ -146,7 +148,7 @@ section.newsletter {
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.5;
-    margin-bottom: 1.5rem;
+    margin-bottom: .5rem;
 }
 
 .form-container form .input-container input::placeholder {
@@ -164,4 +166,18 @@ section.newsletter {
     line-height: 1.5;
     width: 100%;
     cursor: pointer;
+}
+
+input.error {
+    border: 1.5px solid var(--tomato) !important;
+    background-color: var(--tomato-light);
+    color: var(--tomato);
+}
+
+span.error-message {
+    color: var(--tomato);
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.5;
+    visibility: hidden;
 }
