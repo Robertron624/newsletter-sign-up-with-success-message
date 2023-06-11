@@ -1,31 +1,58 @@
-const newsLetterForm = document.querySelector('.form-container form')
+const newsLetterForm = document.querySelector(".form-container form");
 
-const email = document.querySelector('.input-container input')
+const email = document.querySelector(".input-container input");
 
-newsLetterForm.addEventListener('submit', handleSubmit)
+newsLetterForm.addEventListener("submit", handleSubmit);
 
-const emailErrorMessage = document.querySelector('.input-container .error-message')
+const emailErrorMessage = document.querySelector(
+    ".input-container .error-message"
+);
+
+const newsLetterContainer = document.querySelector("section.newsletter");
 
 let isEmailValid;
 
-function handleSubmit (e) {
+const main = document.querySelector("main");
 
-    e.preventDefault()
+function handleSubmit(e) {
+    e.preventDefault();
 
-    const emailValue = e.target[0].value
+    const emailValue = e.target[0].value; //first element of the forms target is the input
 
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    isEmailValid = emailRegex.test(emailValue)
+    isEmailValid = emailRegex.test(emailValue);
 
     if (!isEmailValid) {
-        email.classList.add('error')
-        emailErrorMessage.style.visibility = 'visible'
-        return
-    } else {
-        email.classList.remove('error')
-        emailErrorMessage.style.visibility = 'hidden'
+        email.classList.add("error");
+        emailErrorMessage.style.visibility = "visible";
+        return;
     }
 
-    console.log("Form submitted")
+    email.classList.remove("error");
+    emailErrorMessage.style.visibility = "hidden";
+
+    const thankYouElement = `
+    <div class="thank-you">
+        <div class="text">
+            <img src="/assets/images/icon-success.svg" alt="check icon">
+            <h1>Thanks for subscribing!</h1>
+            <p>A confirmation email has been sent to <strong> ${emailValue}</strong>. Please open it and click the button inside to confirm your subscriptions</p>
+        </div>
+        <button class="dismiss">Dismiss message</button>
+    </div>
+    `;
+
+    newsLetterContainer.remove();
+
+    main.insertAdjacentHTML("afterbegin", thankYouElement);
+
+    const dismissButton = document.querySelector(".thank-you button");
+
+    dismissButton.addEventListener("click", () => {
+        // reload the page
+        location.reload();
+    });
+
+    console.log("Form submitted");
 }

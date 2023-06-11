@@ -75,7 +75,7 @@ body {
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 
     /* ## Colors */
 
@@ -92,12 +92,15 @@ body {
     --white: hsl(0, 0%, 100%);
 }
 
+main {
+    height: 100vh;
+}
 
 section.newsletter {
     margin-inline: auto;
 }
 
-.newsletter .content{
+.newsletter .content {
     padding: 2.5rem 1.5rem;
 }
 
@@ -128,17 +131,17 @@ section.newsletter {
     gap: 1rem;
 }
 
-.form-container form .input-container{
+.form-container form .input-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
 }
 
-.form-container form .input-container label{
+.form-container form .input-container label {
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.5;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 .form-container form .input-container input {
@@ -148,13 +151,14 @@ section.newsletter {
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.5;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 .form-container form .input-container input::placeholder {
     color: var(--grey);
 }
 
+.thank-you button,
 .form-container form button {
     padding: 1rem 0;
     border-radius: 0.5rem;
@@ -180,4 +184,37 @@ span.error-message {
     font-weight: 700;
     line-height: 1.5;
     visibility: hidden;
+}
+
+/* ## Thank you page section */
+
+.thank-you {
+    padding: 0rem 1.5rem;
+    display: grid;
+    gap: 12rem;
+    margin-top: 5rem;
+}
+
+.thank-you img {
+    margin-bottom: 2rem;
+}
+
+.thank-you h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.thank-you p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--dark-slate-grey);
+}
+
+/* ## Media queries */
+
+/* ### Desktop */
+
+@media screen and (min-width: 768px) {
 }
