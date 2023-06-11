@@ -267,4 +267,15 @@ span.error-message {
         color: var(--tomato);
     }
 
+    /* Thank you page desktop */
+
+    .thank-you {
+        margin-inline: auto;
+        max-width: 400px;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 20px;
+        gap: 1rem;
+    }
+
 }
