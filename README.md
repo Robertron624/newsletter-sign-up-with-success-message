@@ -47,7 +47,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Github repo](https://github.com/Robertron624/newsletter-sign-up-with-success-message)
-- Live Site URL: [Netlify app URL](https://silly-elf-d2d29a.netlify.app/)
+- Live Site URL: [Netlify app URL](https://beautiful-praline-e6fc2d.netlify.app/)
 
 ## My process
 
