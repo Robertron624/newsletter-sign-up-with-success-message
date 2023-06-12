@@ -64,8 +64,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 With this project I learned how to use vanilla JavaScript to validate a form and hiding and showing validation errors.
 
-```css
-
 ### Continued development
 
 I want to continue using vanilla JavaScript to build out more projects that don't require a framework (small and not complex). I also want to continue to build out more projects that require form validation.
